@@ -1,0 +1,349 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  
+}
+
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+
+.header .logo{
+  width: 40%;
+  padding-top: 20px;
+  
+}
+
+.header .logo h2{
+  position: relative;
+  left: 30px;
+  cursor: pointer;
+  
+}
+
+.header .nav-links{
+  width: 35%;
+  padding-top: 20px;
+}
+
+.header .nav-links ul li{
+  display: inline-block;
+  list-style: none;
+  padding: 0px 15px;
+  position: relative;
+
+}
+
+.header .nav-links ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.header  .nav-links ul li a::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.header  .nav-links ul li a:hover::after{
+  opacity: 1;
+}
+
+.header .nav-btn{
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.header .nav-btn .btn{
+  padding: 16px 55px;
+  color: #fff;
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* hero section */
+
+
+.hero{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10% 30px 5px 30px;
+  
+}
+
+.hero .hero-text{
+  padding: 0 80px;
+  padding-top: 30px;
+  width: 50%;
+}
+
+.hero .hero-text p{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.hero .hero-text h2{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero .hero-text .form-holder {
+  width: 100%;
+}
+
+.hero .hero-text .form-holder p span{
+  position: relative;
+  left: 5px;
+}
+
+.hero .hero-text .form-holder p{
+  font-size: 1.1em;
+}
+
+.hero .hero-text .form-holder form{
+  width: 500px;
+  height: 55px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid rgb(125, 115, 115);
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.hero .hero-text .form-holder form input{
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 3px;
+
+}
+
+.hero .hero-text .form-holder form button{
+  padding: 15px 55px;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  
+}
+
+.hero .hero-images{
+  width: 50%;
+  padding:  30px 0;
+  position: relative;
+  z-index: 0px;
+}
+
+.hero .hero-images .circle{
+  width: 30%;
+  margin-left: 30%;
+  padding: 27%;
+  background-color: yellow;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0px;
+  
+
+}
+
+.hero .hero-images img{
+  width: 45%;
+  position: absolute;
+  top: 7px;
+  right: 20%;
+  z-index: 1px;
+  
+}
+
+.icons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 7%;
+}
+
+.icons .icon-holder img{
+  margin-right: 10px;
+ 
+}
+
+.icons .icon-text ul li{
+  display: inline-block;
+  list-style: none;
+  padding: 0px 15px;
+  position: relative;
+}
+
+
+.icons .icon-text ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.icons .icon-text ul li a::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: yellow;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.icons .icon-text ul li a:hover::after{
+  opacity: 1;
+}
+
+.icon-text2{
+  display: none;
+}
+
+
+
+
+
+
+/* mobile responsive */
+
+
+@media  only screen and (max-width:700px){
+  .header .nav-links ul li{
+    display: none;
+    
+  }
+
+  .header .nav-btn .btn{
+    display: none;
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 80px 0px;
+  }
+
+  .hero .hero-images .circle{
+    width: 30%;
+    margin: auto;
+    padding: 30%;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1px;
+    
+  
+  }
+
+  .hero .hero-text{
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .hero .hero-images{
+    width: 100%;
+    position: relative;
+    top: 15px;
+
+  }
+
+  .hero .hero-text .form-holder form{
+    width: 100%;
+    
+  }
+
+  .hero .hero-text .form-holder form button{
+    padding: 15px 30px;
+
+  }
+
+  .hero .hero-images img{
+    max-width: 100%;
+    position: absolute;
+    top: 7px;
+    right: 25%;
+    z-index: 1px;
+  }
+
+  .icons .icon-holder img{
+    width: 15%;
+    
+  }
+
+  .icons .icon-text ul li{
+    display: block;
+    margin-bottom: 10px;
+    
+  }
+
+
+  /* hamburger menu css */
+
+#menu-bar{
+  background-color: #fbfafa;
+  width: 95%;
+  max-height: 100%;
+  display: none;
+  position: absolute;
+  z-index: 100px;
+}
+
+#menu-bar ul li ,a{
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px 10px;
+
+}
+
+.x-img{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.x-img img{
+  width: 20px;
+
+ 
+}
+}
